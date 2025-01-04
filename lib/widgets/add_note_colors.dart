@@ -1,40 +1,15 @@
+
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app/add_note_cubit/add_note_cubit.dart';
-import 'package:notes_app/constant.dart';
-
-
-
-class ColorItem extends StatelessWidget {
-  const ColorItem({
-    super.key, required this.color, required this.isActive,
-  });
-
-  final Color color;
-  final bool isActive;
-
-  @override
-  Widget build(BuildContext context) {
-    return CircleAvatar(
-      backgroundColor:isActive?Colors.white:color,
-      radius: 33,
-      child: CircleAvatar(
-        backgroundColor:color,
-        radius: 30,
-
-
-      ),
-    );
-  }
-}
+import '../add_note_cubit/add_note_cubit.dart';
+import '../constant.dart';
+import 'color_item.dart';
 
 class AddNoteColors extends StatefulWidget {
     const AddNoteColors({
    super.key,
    });
-
-  @override
+    @override
   State<AddNoteColors> createState() => _AddNoteColorsState();
 }
 
